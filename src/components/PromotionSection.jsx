@@ -20,10 +20,10 @@ const PromotionSection = () => {
 
                     <div className="flex-1 order-1 md:order-2 space-y-6">
                         <div className="inline-block bg-accent text-white font-black px-4 py-1 text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-3">
-                            ¡MIRA ESTO!
+                            ¡NUEVO CLIP VIRAL!
                         </div>
-                        <h2 className="text-4xl font-black uppercase leading-[0.9]">Toda la verdad en 60 segundos</h2>
-                        <p className="font-bold text-lg leading-snug">Un adelanto exclusivo de lo que encontrarás en nuestro canal principal.</p>
+                        <h2 className="text-4xl font-black uppercase leading-[0.9]">Lo mejor de la charla en 60 segundos</h2>
+                        <p className="font-bold text-lg leading-snug">Los momentos más salvajes y destacados del Episodio 500, directo al grano.</p>
                     </div>
                 </div>
             </div>
