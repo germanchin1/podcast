@@ -26,4 +26,8 @@ La web ha sido diseñada siguiendo los estándares de accesibilidad para asegura
 https://podcast-gray-five.vercel.app/
 
 
+<img width="311" height="200" alt="image" src="https://github.com/user-attachments/assets/bc6ea8f8-5afa-4347-a0af-9216fd12e1c4" />
+
+
+
 
