@@ -1,16 +1,29 @@
-# React + Vite
+# Informe del Proyecto: Fishing Tales Podcast
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Descripción del Trabajo Realizado
+Se ha desarrollado una aplicación web funcional y accesible utilizando **React** y **Vite** para el podcast de pesca deportiva "Fishing Tales". El proyecto destaca por una estética **Retro-Brutalista** de alto contraste, inspirada en periódicos y fanzines clásicos, utilizando una paleta de colores basada en blanco papel, negro tinta y un azul marítimo vibrante como color de acento.
 
-Currently, two official plugins are available:
+### Características implementadas:
+- **Reproductor de Audio Multiepiso**: Permite alternar entre dos episodios de pesca (`ep1.mp3` y `ep2.mp3`) desde la misma interfaz.
+- **Transcripción Dinámica**: Se ha implementado un motor de carga que parsea archivos `.vtt` en tiempo real para mostrar la transcripción del episodio actual en una barra lateral desplazable.
+- **Material Promocional**: Integración de un vídeo corto promocional con un póster estético generado mediante IA para mejorar el primer impacto visual.
+- **Layout Responsive**: Diseño adaptable a diferentes tamaños de pantalla manteniendo la rejilla brutalista.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 2. Verificación de Accesibilidad
+La web ha sido diseñada siguiendo los estándares de accesibilidad para asegurar que el contenido sea consumible por todos los usuarios:
 
-## React Compiler
+- **HTML Semántico**: Se han utilizado etiquetas estructurales de HTML5 (`<header>`, `<main>`, `<section>`, `<footer>`) y una jerarquía de encabezados coherente para facilitar la navegación con lectores de pantalla.
+- **Transcripción y Subtítulos**: 
+    - Se incluyen etiquetas `<track>` en el reproductor para subtítulos nativos.
+    - Se proporciona una transcripción textual completa en la barra lateral, esencial para usuarios con discapacidad auditiva.
+- **Contraste de Color**: La combinación de colores (negro sobre blanco/ocre y azul intenso) garantiza un ratio de contraste superior a las recomendaciones de las WCAG AA.
+- **Navegación por Teclado**: Todos los elementos interactivos (botones de cambio de episodio, controles de reproducción) son accesibles y operables mediante el teclado, manteniendo un "focus ring" visible.
+- **Atributos ARIA**: Uso de `aria-label` en reproductores y botones para proporcionar contexto adicional a las herramientas de asistencia.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
+*Desarrollado por German Romo Orta*
 
-## Expanding the ESLint configuration
+https://podcast-gray-five.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
