@@ -25,6 +25,13 @@ La web ha sido diseñada siguiendo los estándares de accesibilidad para asegura
 
 https://podcast-gray-five.vercel.app/
 
+<img width="1835" height="326" alt="image" src="https://github.com/user-attachments/assets/8bc83e3c-afd6-48c5-8753-b4aded0a9151" />
+<img width="1902" height="654" alt="image" src="https://github.com/user-attachments/assets/c89be1e9-ef03-497e-8fee-80b636ddfad7" />
+
+herramieta usada para editar el audio: https://mp3cut.net/
+
+
+
 
 <img width="311" height="200" alt="image" src="https://github.com/user-attachments/assets/bc6ea8f8-5afa-4347-a0af-9216fd12e1c4" />
 
