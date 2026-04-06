@@ -35,7 +35,6 @@ const Informe = () => {
         </button>
 
         <div className="border-4 border-border p-8 bg-paper">
-          <p className="text-sm font-bold uppercase mb-4 opacity-50 text-center border-b-2 border-border pb-2">Vista previa de la Plantilla (c9e433f2.txt extendida)</p>
 
           <div ref={reportRef} className="bg-white text-black p-8 font-serif leading-relaxed text-justify" style={{ fontSize: '11pt' }}>
             <h2 className="text-2xl font-bold text-center mb-4">INFORME DE AUDITORÍA DE ACCESIBILIDAD</h2>
