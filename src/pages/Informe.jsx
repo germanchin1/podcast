@@ -49,8 +49,8 @@ const Informe = () => {
 
             <h4 className="text-lg font-bold mb-3 uppercase border-b-2 border-gray-300 pb-1">IDENTIFICACIÓN Y ENLACES DEL PROYECTO</h4>
             <div className="text-sm mb-8 space-y-2">
-              <p><strong>URL pública:</strong> https://fishing-tales-accesible.vercel.app</p>
-              <p><strong>GitHub:</strong> https://github.com/usuario/fishing-tales-accesible</p>
+              <p><strong>URL pública:</strong> https://podcast-gray-five.vercel.app/</p>
+              <p><strong>GitHub:</strong> https://github.com/germanchin1/podcast</p>
               <p><strong>Commit sin accesibilidad:</strong> https://github.com/germanchin1/podcast/commit/64d0393a5c39601322ce18e174210cde1f84e29e</p>
               <p><strong>Commit accesible:</strong> https://github.com/germanchin1/podcast/commit/b1a347f7c29e270440bca92d7f6692589dcfe3eb</p>
 
@@ -60,7 +60,7 @@ const Informe = () => {
             <h4 className="text-lg font-bold mb-3 uppercase border-b-2 border-gray-300 pb-1">RESUMEN EJECUTIVO</h4>
             <div className="text-sm mb-8 space-y-4">
               <p>En este informe validamos técnicamente 'Fishing Tales', un proyecto armado en React con Vite y pensado para plataformas modernas en la nube. El gran objetivo fue asegurar que pasara con éxito el estándar **WCAG 2.2 nivel AA**. Estas normas son hoy día indispensables para asegurar que las páginas no dejen a nadie fuera, sin importar sus capacidades visuales, motoras o cognitivas.</p>
-              
+
               <p>Para comprobar que todo andara fino, mezclamos el uso de herramientas de escaneo veloces (Lighthouse, Axe y WAVE) con horas de revisiones puramente manuales probando el sitio usando solo el teclado, tal como lo haría una persona sin acceso a un ratón.</p>
 
               <p>Afinamos especialmente el esquema de etiquetas bajo el capó (el famoso DOM). Si el código no está súper ordenado, los programas como los lectores de pantalla simplemente se pierden. Pudimos probar que nuestros ajustes en el código ahora garantizan un viaje libre de barreras y trabas digitales.</p>
@@ -69,7 +69,7 @@ const Informe = () => {
             <h4 className="text-lg font-bold mb-3 uppercase border-b-2 border-gray-300 pb-1">CONTEXTO TÉCNICO</h4>
             <div className="text-sm mb-8 space-y-4">
               <p>La base de nuestra app es React, que usa "componentes" visuales (botones, tarjetas) como si fuesen bloques de Lego independientes. Las páginas, conocidas como SPA (Single Page Application), no se recargan al hacer clic; sino que el navegador hace todo internamente vía JavaScript siendo sumamente rápido.</p>
-              
+
               <p>Pero tanta magia dinámica es peligrosa para la accesibilidad. Como no hay una verdadera recarga, un software de lectura no se entera automáticamente de si brincó un mensaje de error rojo en la pantalla al ingresar el correo porque el evento está "oculto" técnicamente del foco en el momento inicial.</p>
 
               <p>La solución fue aprovechar el poderoso atributo `aria-live`. Le pedimos a React que cuando surgiera una alerta dinámica, le inyectara inmediatamente un <code>aria-live="polite"</code>. Literalmente, esto le "susurra" en segundo plano a las herramientas de apoyo que hay novedades visuales frente al usuario, logrando una interacción moderna y segura a la vez.</p>
@@ -110,7 +110,7 @@ const Informe = () => {
             <h4 className="text-lg font-bold mb-3 uppercase border-b-2 border-gray-300 pb-1">EVALUACIÓN Y CIERRE</h4>
             <div className="text-sm mb-8 space-y-4">
               <p>Al auditar nuevamente y barrer el código bajo escáner, los resultados fueron rotundos: logramos un contundente puntaje de 97 para inclusividad de forma general en Lighthouse y un tablero verde absoluto al correr rutinas mediante WAVE DevTools validando los enlaces, enfoques lógicos y etiquetas. El sitio está sumamente limpio del uso torpe frente cualquier teclado y se entiende de sobra la estructura de lo visual frente herramientas de apoyo sensorial.</p>
-              
+
               <div className="bg-gray-50 border border-gray-200 p-4 mt-6">
                 <p className="font-bold mb-2">Evidencia de Validación - PageSpeed Insights:</p>
                 <p className="mb-4">
@@ -118,7 +118,7 @@ const Informe = () => {
                     https://pagespeed.web.dev/analysis/https-podcast-gray-five-vercel-app/9373j78lby?hl=es-ES&form_factor=desktop
                   </a>
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                   <div>
                     <img src="/lighthouse.png" alt="Captura de validación en Lighthouse con 97 de accesibilidad" className="w-full h-auto border border-gray-300 shadow-sm" />
