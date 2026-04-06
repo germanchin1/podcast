@@ -110,6 +110,26 @@ const Informe = () => {
             <h4 className="text-lg font-bold mb-3 uppercase border-b-2 border-gray-300 pb-1">EVALUACIÓN Y CIERRE</h4>
             <div className="text-sm mb-8 space-y-4">
               <p>Al auditar nuevamente y barrer el código bajo escáner, los resultados fueron rotundos: logramos un contundente puntaje de 97 para inclusividad de forma general en Lighthouse y un tablero verde absoluto al correr rutinas mediante WAVE DevTools validando los enlaces, enfoques lógicos y etiquetas. El sitio está sumamente limpio del uso torpe frente cualquier teclado y se entiende de sobra la estructura de lo visual frente herramientas de apoyo sensorial.</p>
+              
+              <div className="bg-gray-50 border border-gray-200 p-4 mt-6">
+                <p className="font-bold mb-2">Evidencia de Validación - PageSpeed Insights:</p>
+                <p className="mb-4">
+                  <a href="https://pagespeed.web.dev/analysis/https-podcast-gray-five-vercel-app/9373j78lby?hl=es-ES&form_factor=desktop" target="_blank" rel="noreferrer" className="text-blue-600 underline break-all">
+                    https://pagespeed.web.dev/analysis/https-podcast-gray-five-vercel-app/9373j78lby?hl=es-ES&form_factor=desktop
+                  </a>
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                  <div>
+                    <img src="/lighthouse.png" alt="Captura de validación en Lighthouse con 97 de accesibilidad" className="w-full h-auto border border-gray-300 shadow-sm" />
+                    <p className="text-xs text-center text-gray-500 mt-2">Lighthouse / PageSpeed Insights</p>
+                  </div>
+                  <div>
+                    <img src="/wave.png" alt="Captura de validación en WAVE con 0 errores de contraste y estructura" className="w-full h-auto border border-gray-300 shadow-sm" />
+                    <p className="text-xs text-center text-gray-500 mt-2">WAVE Web Accessibility Evaluation Tool</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <h4 className="text-lg font-bold mb-3 uppercase border-b-2 border-gray-300 pb-1">EXPORTACIÓN PDF</h4>
