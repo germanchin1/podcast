@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #005ce6;
+  --color-accent: #004fb3; /* Cambiado para un mejor contraste (>4.5) sobre blanco */
   --color-paper: #f0ede5;
   --color-ink: #1a1a1a;
   --color-border: #1a1a1a;
@@ -68,4 +68,20 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: var(--color-border);
+}
+
+/* Modificaciones de Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .animate-marquee {
+    animation: none !important;
+  }
 }

@@ -1,55 +1,29 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import { Header, Footer } from './components/Layout';
-import PodcastSection from './components/PodcastSection';
-import PromotionSection from './components/PromotionSection';
+import Home from './pages/Home';
+import PodcastPage from './pages/PodcastPage';
+import Contacto from './pages/Contacto';
+import Informe from './pages/Informe';
 
 function App() {
   return (
-    <div className="min-h-screen bg-paper">
+    <div className="min-h-screen bg-paper flex flex-col">
+      {/* Skip Link para teclado */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-accent focus:text-white focus:font-bold">
+        Saltar al contenido principal
+      </a>
+      
       <Header />
 
-      <main>
-        {/* Newspaper Style Hero */}
-        <section id="inicio" className="py-24 px-6 border-b-4 border-border bg-white overflow-hidden">
-          <div className="max-w-7xl mx-auto text-center space-y-12">
-            <div className="space-y-4">
-              <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none">
-                FISHING <span className="bg-accent text-white px-4 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">TALES</span>
-              </h2>
-              <div className="flex items-center justify-center gap-4 py-2 border-y-4 border-border font-black text-xl overflow-hidden whitespace-nowrap">
-                <span className="animate-marquee inline-block">EL PODCAST DE PESCA DEFINITIVO — TÉCNICAS — MATERIAL — AVENTURAS — </span>
-                <span className="animate-marquee inline-block">EL PODCAST DE PESCA DEFINITIVO — TÉCNICAS — MATERIAL — AVENTURAS — </span>
-              </div>
-            </div>
-
-            <div className="max-w-2xl mx-auto space-y-8">
-              <p className="text-2xl font-bold leading-tight">
-                Sumérgete en el mundo de la pesca deportiva. Historias, trucos y los mejores consejos para tu próxima gran captura.
-              </p>
-              <div className="flex flex-wrap justify-center gap-6">
-                <a href="#podcast" className="brutalist-button text-xl">
-                  Ir al Podcast
-                </a>
-                <a href="#promocion" className="brutalist-button text-xl !bg-white !text-border">
-                  Ver Trailer
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="bg-paper py-8">
-          <PodcastSection />
-          <PromotionSection />
-        </div>
-
-        {/* Accessibility Marquee */}
-        <div className="bg-border py-4 overflow-hidden">
-          <p className="text-white font-black text-sm text-center uppercase tracking-[0.5em]">
-            Accesibilidad Garantizada — Transcripciones Incluidas — Navegación por Teclado
-          </p>
-        </div>
-      </main>
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/episodios" element={<PodcastPage />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="/informe" element={<Informe />} />
+        </Routes>
+      </div>
 
       <Footer />
     </div>

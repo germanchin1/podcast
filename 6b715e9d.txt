@@ -1,0 +1,554 @@
+                             Disseny d'Interfícies Web
+
+DESARROLLO COMPLETO DE LA PRÁCTICA RA5
+Web accesible real desarrollada en React
+En esta práctica no vais a hacer “pequeños ajustes”. Vais a trabajar como
+desarrolladores frontend profesionales que reciben el encargo de revisar y adaptar
+una web para que cumpla criterios de accesibilidad nivel AA.
+
+El proyecto debe estar desarrollado en React y publicado en un servidor online.
+Puede ser Vercel, Netlify, Cloudflare Pages o una Raspberry correctamente
+accesible desde internet. La web debe poder abrirse con una URL pública en el
+momento de la corrección. No es válido enseñarlo solo en local.
+
+El objetivo no es que la web tenga buena puntuación únicamente. El objetivo es que
+entendáis por qué algo no es accesible y sepáis solucionarlo correctamente.
+
+QUÉ WEB DEBÉIS USAR
+
+Podéis partir de:
+
+   •   El proyecto del podcast anterior.
+   •   Un proyecto propio desarrollado en el módulo.
+   •   O una base que ya tengáis en React.
+
+Pero si el proyecto no tiene ciertas partes necesarias para evaluar accesibilidad,
+debéis ampliarlo.
+
+Por ejemplo, si vuestra web solo tiene contenido estático, no es suficiente.
+Debe incluir interacción real.
+
+Por eso la estructura mínima obligatoria es la siguiente:
+
+Debe existir una página principal, una página de contenido (por ejemplo, la del
+podcast o proyecto) y una página de contacto con formulario real.
+
+La página de contacto no es decorativa. Se utiliza para evaluar accesibilidad en
+formularios, validaciones y mensajes dinámicos. Por tanto, debéis usarla.
+
+PÁGINA PRINCIPAL
+
+La página principal debe tener una estructura clara y lógica.
+
+Debe empezar con un header.
+Header es la zona superior donde normalmente aparece el título del sitio y la
+navegación.
+
+Dentro debe haber un menú de navegación.
+
+Nav es una etiqueta semántica que indica que ese bloque contiene enlaces de
+navegación.
+                              Disseny d'Interfícies Web
+
+Semántica significa que la etiqueta tiene significado estructural, no solo visual.
+
+Después del header debe existir un main.
+
+Main es la zona principal del contenido de la página. Solo debe existir un main por
+página.
+
+Dentro del main debéis estructurar el contenido con encabezados coherentes.
+
+Encabezados son etiquetas h1, h2, h3…
+
+Solo debe haber un h1 por página.
+El h1 es el título principal.
+
+Los h2 organizan secciones.
+Los h3 organizan subsecciones.
+
+No se debe saltar directamente de h1 a h4 sin lógica, porque eso rompe la
+estructura que utilizan los lectores de pantalla para navegar.
+
+El menú debe poder utilizarse con teclado. Eso significa que con la tecla Tab se
+pueda recorrer cada enlace y activarlo con Enter.
+
+Cuando se navega con Tab, el elemento activo tiene foco.
+
+El foco debe ser visible.
+Si no es visible, una persona que no usa ratón no sabrá en qué parte de la página
+está.
+
+PÁGINA DE CONTENIDO (PODCAST O PROYECTO)
+
+Aquí debéis demostrar que sabéis trabajar accesibilidad en contenido multimedia o
+estructurado.
+
+Si hay imágenes, todas deben tener atributo alt.
+
+Alt es un texto alternativo que describe la imagen para personas que no pueden
+verla.
+
+Si la imagen es decorativa y no aporta información, debe tener alt vacío (alt="").
+Eso indica al lector de pantalla que ignore la imagen.
+
+Si hay audio o vídeo, debe existir transcripción.
+
+Transcripción significa una versión escrita completa del contenido hablado.
+
+Sin transcripción, una persona con discapacidad auditiva no puede acceder al
+contenido.
+
+El reproductor debe poder activarse con teclado.
+                              Disseny d'Interfícies Web
+
+Los botones deben tener texto claro.
+No se debe usar texto ambiguo como “más información”.
+
+PÁGINA DE CONTACTO (OBLIGATORIA)
+
+Esta es la parte clave.
+
+Debéis crear una página de contacto con un formulario real.
+
+Formulario es un conjunto de campos que permiten al usuario introducir datos.
+
+Debe incluir al menos:
+
+   •   Nombre
+   •   Email
+   •   Mensaje
+   •   Botón de envío
+
+Cada campo debe tener un label asociado.
+
+Label es la etiqueta que describe el campo.
+
+Por ejemplo, el campo email debe tener un texto visible que diga “Correo
+electrónico”.
+
+El label debe estar correctamente vinculado al input.
+Esto permite que un lector de pantalla anuncie correctamente el campo.
+
+Debéis implementar validación.
+
+Validación significa comprobar que el usuario introduce datos correctos.
+
+Si el campo está vacío o el email no tiene formato correcto, debe mostrarse un
+mensaje claro.
+
+Ese mensaje no puede depender solo del color.
+
+No basta con poner el borde en rojo.
+
+Debe existir un texto que explique el error.
+
+Además, ese mensaje debe poder ser detectado por un lector de pantalla.
+
+Si el mensaje aparece dinámicamente después de enviar el formulario, debéis usar
+aria-live.
+
+Aria-live es un atributo que permite anunciar cambios dinámicos a tecnologías de
+asistencia.
+                              Disseny d'Interfícies Web
+
+React genera contenido dinámico constantemente. Por eso es importante entender
+cómo hacerlo accesible.
+
+El formulario completo debe poder rellenarse y enviarse usando solo teclado.
+
+MEJORAS OBLIGATORIAS
+
+Además de lo anterior, debéis implementar:
+
+Un enlace “Saltar al contenido”.
+
+Este enlace aparece al principio del documento y permite que una persona que usa
+teclado pueda saltar directamente al main sin tener que recorrer todo el menú.
+
+También debéis asegurar contraste mínimo nivel AA.
+
+Contraste es la diferencia entre el color del texto y el fondo.
+
+El mínimo exigido es 4.5:1 para texto normal.
+
+Podéis verificarlo con herramientas online.
+
+MEJORAS DE NIVEL SUPERIOR
+
+Para demostrar mayor dominio técnico, debéis implementar al menos una mejora
+avanzada.
+
+Por ejemplo:
+
+Implementar prefers-reduced-motion.
+
+Esto es una regla CSS que detecta si el usuario ha configurado su sistema para
+reducir animaciones.
+
+Si está activado, vuestra web debe eliminar animaciones innecesarias.
+
+Otra opción es implementar un modo alto contraste activable.
+
+Esto demuestra control real de diseño accesible.
+
+VERIFICACIÓN FINAL
+
+Una vez aplicada la mejora, debéis repetir la auditoría con Lighthouse.
+
+Debéis comparar el antes y el después.
+
+La mejora debe ser real y justificable.
+
+No se trata de maquillar el resultado.
+                             Disseny d'Interfícies Web
+
+PLANTILLA COMPLETA DEL INFORME DE
+ACCESIBILIDAD
+(Documento modelo que debéis generar y descargar en PDF desde vuestra
+web)
+
+Este informe no se entrega como archivo aparte creado manualmente.
+Debe generarse desde la propia web y descargarse en formato PDF utilizando una
+librería de JavaScript o React.
+
+Por ejemplo, podéis usar:
+
+   •   jsPDF (librería JavaScript para generar PDFs desde el navegador)
+   •   react-pdf
+   •   html2pdf
+   •   o cualquier solución similar
+
+Una librería es un conjunto de funciones ya programadas que os permite reutilizar
+código para realizar tareas complejas, como generar un PDF, sin programarlo todo
+desde cero.
+
+El botón “Descargar informe en PDF” debe estar dentro de vuestra web y generar el
+documento automáticamente.
+
+MODELO DE INFORME
+
+Título:
+Informe de Auditoría de Accesibilidad Web
+Proyecto desarrollado en React
+
+Autor:
+Fecha:
+URL del proyecto:
+
+Introducción
+
+Este documento presenta la auditoría de accesibilidad realizada sobre la web
+desarrollada con React. El objetivo del análisis ha sido verificar el cumplimiento de
+los criterios WCAG 2.2 nivel AA y aplicar las correcciones necesarias para mejorar
+la accesibilidad de la interfaz.
+
+WCAG (Web Content Accessibility Guidelines) son las pautas internacionales que
+establecen cómo debe construirse una web para que sea accesible. Estas pautas
+están organizadas en principios técnicos y niveles de conformidad.
+
+Nivel AA es el nivel estándar exigido en la mayoría de proyectos profesionales y
+entornos institucionales.
+                              Disseny d'Interfícies Web
+
+Marco conceptual aplicado
+
+La accesibilidad web se basa en cuatro principios fundamentales conocidos como
+POUR.
+
+Perceptible
+El contenido debe poder percibirse por todos los usuarios.
+Esto implica que las imágenes deben tener texto alternativo.
+
+Texto alternativo (atributo alt) es una descripción escrita de una imagen que los
+lectores de pantalla pueden leer en voz alta.
+
+También implica que el contraste entre texto y fondo sea suficiente.
+
+Contraste es la diferencia de luminosidad entre el texto y el fondo.
+Si el contraste es bajo, el texto puede resultar ilegible para personas con baja visión.
+
+Operable
+La interfaz debe poder utilizarse.
+
+Esto significa que toda la web debe poder navegarse con teclado.
+
+Navegación por teclado significa que utilizando la tecla Tab se puede recorrer todos
+los elementos interactivos.
+
+Elemento interactivo es cualquier botón, enlace o campo que permita acción.
+
+Cuando se navega con teclado, el elemento activo recibe foco.
+
+Foco es el estado visual que indica qué elemento está seleccionado.
+
+Comprensible
+El contenido debe ser claro y entendible.
+
+Por ejemplo, un formulario no debe mostrar errores únicamente mediante color.
+Debe incluir un mensaje explicativo.
+
+Formulario es un conjunto de campos que permiten al usuario introducir información.
+
+Robusto
+El código debe estar estructurado correctamente para funcionar con tecnologías de
+asistencia.
+
+Aquí es fundamental el uso de HTML semántico.
+
+HTML semántico significa usar etiquetas con significado estructural como header,
+main, nav o section en lugar de usar únicamente div.
+
+Div es una etiqueta genérica sin significado estructural.
+                               Disseny d'Interfícies Web
+
+Auditoría inicial
+
+La auditoría inicial se realizó utilizando las siguientes herramientas:
+
+Lighthouse
+Herramienta integrada en Chrome que analiza accesibilidad, rendimiento y buenas
+prácticas.
+
+WAVE
+Extensión que identifica errores estructurales y problemas de contraste.
+
+Axe DevTools
+Herramienta profesional que detecta problemas de accesibilidad más específicos.
+
+Resultados iniciales:
+
+Puntuación de accesibilidad Lighthouse: 72/100
+
+Principales problemas detectados:
+
+   •   Imágenes sin atributo alt.
+   •   Contraste insuficiente en botones secundarios.
+   •   Inputs de formulario sin label asociado.
+   •   Falta de enlace “Saltar al contenido”.
+   •   Foco no visible en navegación por teclado.
+
+
+
+Correcciones implementadas
+
+Se reorganizó la estructura utilizando header, nav, main y footer correctamente.
+
+Se revisó la jerarquía de encabezados para asegurar un único h1 por página.
+
+Jerarquía significa el orden lógico de los títulos.
+
+Se añadieron atributos alt descriptivos a todas las imágenes informativas y alt vacío
+en imágenes decorativas.
+
+Se implementó una página de contacto con formulario accesible.
+
+Cada campo tiene su label asociado correctamente.
+
+Asociado significa que el texto descriptivo está vinculado técnicamente al campo
+correspondiente.
+
+Se añadió validación accesible.
+                             Disseny d'Interfícies Web
+
+Validación accesible significa que cuando un campo es incorrecto se muestra un
+mensaje textual claro y no solo un cambio de color.
+
+Se implementó aria-live para anunciar mensajes dinámicos.
+
+Aria-live es un atributo que permite que los lectores de pantalla detecten cambios de
+contenido generados dinámicamente por React.
+
+Se añadió un enlace “Saltar al contenido”.
+
+Este enlace permite a usuarios de teclado omitir el menú y acceder directamente al
+contenido principal.
+
+Se ajustaron colores para cumplir contraste mínimo 4.5:1.
+
+
+
+Una vez realizadas las correcciones y las mejoras básicas ahora:
+Mejoras que se deben realizar
+Se implementó prefers-reduced-motion
+
+En muchas webs modernas se utilizan animaciones: transiciones suaves, efectos al
+hacer hover, desplazamientos animados, aparición progresiva de elementos, etc.
+
+Estas animaciones mejoran la experiencia visual para muchas personas, pero
+pueden provocar molestias en otras, especialmente en personas con:
+
+   •   Sensibilidad al movimiento
+   •   Trastornos vestibulares
+   •   Migrañas
+   •   Problemas neurológicos relacionados con estímulos visuales
+
+Los sistemas operativos modernos (Windows, macOS, iOS, Android) permiten al
+usuario activar una preferencia llamada “reducir movimiento”.
+
+Cuando una persona activa esta opción en su sistema, está indicando que prefiere
+interfaces con menos animaciones.
+
+Aquí entra prefers-reduced-motion.
+
+Prefers-reduced-motion es una media query de CSS.
+
+Una media query es una condición que permite aplicar estilos dependiendo de
+ciertas características del dispositivo o del usuario.
+
+Por ejemplo, ya habéis usado media queries para diseño responsive (cuando la
+pantalla es menor a cierto ancho).
+                             Disseny d'Interfícies Web
+
+En este caso, la media query detecta si el usuario ha activado la preferencia de
+reducir movimiento.
+
+Se escribe así:
+
+@media (prefers-reduced-motion: reduce) {
+/* estilos alternativos */
+}
+
+Cuando esta condición se cumple, podéis:
+
+   •   Eliminar animaciones.
+   •   Reducir duración de transiciones.
+   •   Quitar efectos de desplazamiento.
+   •   Desactivar animaciones automáticas.
+
+No se trata de eliminar diseño, sino de adaptar la experiencia.
+
+Esto es accesibilidad porque respeta la configuración personal del usuario.
+
+No todas las personas perciben las animaciones igual. Una web accesible debe
+adaptarse.
+
+Botones con texto descriptivo y no solo iconos
+
+Otro aspecto que se corrigió fue asegurar que los botones no dependan únicamente
+de iconos.
+
+En muchas interfaces modernas se usan botones con solo un icono, por ejemplo:
+
+   •   Un icono de papelera para eliminar.
+   •   Un icono de sobre para enviar mensaje.
+   •   Un icono de flecha para avanzar.
+
+El problema es que:
+
+   •   No todas las personas interpretan los iconos de la misma
+       manera.
+   •   Los lectores de pantalla no “ven” el icono, solo leen el
+       contenido textual.
+
+Si un botón solo contiene un icono SVG sin texto, el lector de pantalla puede
+anunciarlo como “botón” sin descripción.
+
+Eso genera ambigüedad, por eso, los botones deben:
+
+   •   Tener texto visible claro
+       o
+   •   Tener un atributo aria-label descriptivo si visualmente solo se muestra el
+       icono.
+                             Disseny d'Interfícies Web
+
+Aria-label es un atributo que proporciona una descripción accesible a tecnologías
+de asistencia.
+
+Por ejemplo:
+
+<button aria-label="Eliminar mensaje">             </button>
+
+De esta forma, el lector de pantalla anunciará “Eliminar mensaje, botón”.
+
+Pero incluso mejor práctica es combinar icono + texto visible cuando sea posible.
+
+Además, el texto debe describir claramente la acción.
+
+No es correcto usar textos como “clic aquí” o “más”.
+
+Debe indicar la acción real:
+“Descargar informe PDF”
+“Enviar formulario”
+“Escuchar episodio completo”
+
+Esto mejora la accesibilidad y también la usabilidad general.
+
+Usabilidad significa facilidad de uso. Aunque no es lo mismo que accesibilidad,
+están relacionadas.
+
+
+
+Validación final
+
+Después de aplicar todas las mejoras, se volvió a ejecutar la auditoría con
+Lighthouse. La nueva puntuación obtenida fue 96/100 en accesibilidad.
+
+Lighthouse es una herramienta automática que analiza aspectos técnicos de la web
+como estructura, contraste, etiquetas de formulario y uso correcto de atributos
+accesibles. La mejora en la puntuación indica que los errores detectados
+inicialmente fueron corregidos correctamente.
+
+La mejora se observa en cuatro aspectos principales:
+
+Estructura semántica
+Se reorganizó el código utilizando etiquetas con significado real como header, nav y
+main en lugar de usar solo div. Esto permite que lectores de pantalla entiendan
+mejor la estructura de la página y facilita la navegación.
+
+Formularios
+Se añadieron labels correctamente asociados a cada campo y mensajes de error
+claros. También se aseguró que el formulario pueda completarse usando
+únicamente el teclado. Esto mejora la comprensión y la interacción para todos los
+usuarios.
+                             Disseny d'Interfícies Web
+
+Contraste
+Se ajustaron los colores para cumplir el mínimo exigido de 4.5:1 entre texto y fondo.
+El contraste es la diferencia visual entre texto y fondo, y es fundamental para
+personas con baja visión.
+
+Navegación por teclado
+Se verificó que todos los elementos interactivos (botones, enlaces, campos) puedan
+usarse sin ratón. Además, el foco es visible, es decir, se puede ver claramente qué
+elemento está seleccionado al navegar con la tecla Tab.
+
+La mejora en la puntuación no es solo un número más alto, sino el resultado de una
+estructura más clara, formularios correctamente implementados y una experiencia
+más inclusiva.
+
+
+
+Conclusión
+
+La web cumple nivel AA en los aspectos evaluados.
+Se ha mejorado la accesibilidad estructural, funcional y visual.
+
+La accesibilidad no consiste únicamente en alcanzar una puntuación, sino en
+garantizar que cualquier usuario pueda interactuar con la interfaz sin barreras.
+
+
+
+
+GENERACIÓN DEL INFORME EN PDF
+Este documento no debe crearse manualmente en Word.
+
+Debéis generar el informe desde la propia web usando una librería JavaScript.
+
+Por ejemplo, usando jsPDF o parecidos:
+
+   •   Se crea un componente React llamado InformePDF.
+   •   Se genera el contenido dinámicamente.
+   •   Se añade un botón “Descargar informe”.
+   •   Al pulsarlo, se genera y descarga el PDF.
+
+Esto demuestra:
+
+   •   Dominio de React.
+   •   Manipulación de contenido dinámico.
+   •   Integración de librerías externas.
+   •   Capacidad de automatización.
+
+El botón de descarga debe ser accesible, tener foco visible y poder activarse con
+teclado.
+
